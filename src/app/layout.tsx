@@ -1,30 +1,14 @@
-import React from 'react';
-import './globals.css';
-import { NotesProvider } from '../contexts/NotesContext';
-import Header from '../components/ui/Header';
-import Footer from '../components/ui/Footer';
+import { NotesProvider } from '../context/NotesContext';
+import '../styles/globals.css';
 
-export const metadata = {
-  title: 'Note App',
-  description: 'A Next.js Note-taking application',
-};
-
-const RootLayout: React.FC = ({ children }) => {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <NotesProvider>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          {children}
         </NotesProvider>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
