@@ -1,12 +1,11 @@
-import React from 'react';
-import NoteList from '../components/features/NoteList';
-import AddNote from '../components/features/AddNote';
+import NotesPage from './notes/page';
+import NoteForm from '../components/NoteForm';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
-    <div className="container mx-auto p-4">
-      <AddNote />
-      <NoteList />
+    <div className="home-page">
+      <NoteForm />
+      <NotesPage />
     </div>
   );
 };
